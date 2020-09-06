@@ -1,5 +1,10 @@
 console.log('you are hearing me talk');
 
+$( function() {
+    $('.slider').slider();
+});
+
+
 const buttonFxn = function(event) {
     let hue2 = $('.input1').val();
     let lite2 = $('.input2').val();
@@ -91,7 +96,7 @@ const buttonFxn = function(event) {
         if(hexVal.length === 1){
             hexVal = '0'+hexVal;
         }
-        return hexVal
+        return hexVal.toUpperCase();
     }
 
     red.hex = toHexString(red);
