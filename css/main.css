@@ -1,17 +1,24 @@
+body {
+    background-color: #f1f1f1;
+}
+
+h2 {
+    margin: 0 auto;
+    text-align: center;
+}
 
 .container {
     width: 75vh;
     height: 100vh;
-    background-color: #f1f1f1;
+    /* background-color: #f1f1f1; */
 }
 
 .display {
     height: 40vh;
     width: 40vh;
-    background-color: red;
+    background-color: rgb(128, 128, 64);
     margin: 2px auto;
     border: 2px solid black;
-
 }
 
 .input {

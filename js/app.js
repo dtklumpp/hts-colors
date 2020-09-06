@@ -32,9 +32,9 @@ const buttonFxn = function(event) {
     let green = new Color();
     let blue = new Color();
     
-    let brightest;
-    let middle;
-    let darkest;
+    // let brightest;
+    // let middle;
+    // let darkest;
     
     let color = (hue * 3 / 100);
     // let color2 = (2* ((color + 0.5) % 3) );
@@ -42,18 +42,16 @@ const buttonFxn = function(event) {
     let degree = color - Math.floor(color);
     let ratio = (1 - 2 * Math.abs(degree - 0.5));
     
-    console.log(color);
+    // console.log(color);
     //console.log(color2);
-    console.log(degree);
-    console.log(ratio);
-    
+    // console.log(degree);
+    // console.log(ratio);
     
     const assignRatio = function(primary, secondary, tertiary){
         let x = primary.value = lite;
         let y = tertiary.value = deSat/100 * lite;
         let z = secondary.value = y + (x - y) * ratio;
     }
-    
     if(color < 0.5){assignRatio(blue, red, green)} else
     if(color < 1.0){assignRatio(red, blue, green)} else
     if(color < 1.5){assignRatio(red, green, blue)} else
@@ -71,20 +69,20 @@ const buttonFxn = function(event) {
     assignHex(green);
     assignHex(blue);
     
-    console.log('Red: '+red.hex);
-    console.log('Green: '+green.hex);
-    console.log('Blue: '+blue.hex);
+    // console.log('Red: '+red.hex);
+    // console.log('Green: '+green.hex);
+    // console.log('Blue: '+blue.hex);
 
-    rgbVar = 'rgb('+red.hex+', '+green.hex+', '+blue.hex+')'
+    rgbVar = '('+red.hex+', '+green.hex+', '+blue.hex+')'
     
-    $('.display').css('background-color', rgbVar);
+    $('.display').css('background-color', 'rgb'+rgbVar);
 
-    $('.convert1').text('RGB equivalent: '+rgbVar);
+    $('.convert1').text('RGB: '+rgbVar);
 
     redHex = red.hex.toString(16);
     greenHex = green.hex.toString(16);
     blueHex = blue.hex.toString(16);
-    $('.convert2').text('HEX equivalent: #'+redHex+greenHex+blueHex);
+    $('.convert2').text('HEX: #'+redHex+greenHex+blueHex);
     
 }
 
@@ -135,3 +133,5 @@ $('.button1').on('click', buttonFxn);
 //middle color = (brightest - darkest) * ratio, + darkest
 
 //brown e.g. is 70 90 41.67
+//green-brown e.g. is 50 50 51
+//or i dunno maybe 50 50 50
