@@ -1,8 +1,63 @@
 console.log('you are hearing me talk');
-
+/* 
 $( function() {
     $('.slider').slider();
 });
+ */
+
+$( function() {
+    let dial1 = $('#shade');
+
+    $( "#holder" ).slider({
+        create: function() {
+            $(this).slider('value', 50);
+            dial1.text($(this).slider('value'));
+        },
+        slide: function(event, ui) {
+            dial1.text(ui.value);
+            $('.input2').val(ui.value);
+            buttonFxn();
+        }
+    });
+});
+
+$( function() {
+    let dial1 = $('#sat');
+
+    $( "#holder2" ).slider({
+        create: function() {
+            $(this).slider('value', 50);
+            dial1.text($(this).slider('value'));
+        },
+        slide: function(event, ui) {
+            dial1.text(ui.value);
+            $('.input3').val(ui.value);
+            buttonFxn();
+        }
+    });
+});
+
+
+$( function() {
+    let dial1 = $('#hue');
+
+    $( "#holder3" ).slider({
+        create: function() {
+            $(this).slider('value', 50);
+            dial1.text($(this).slider('value'));
+        },
+        slide: function(event, ui) {
+            dial1.text(ui.value);
+            $('.input1').val(ui.value);
+            buttonFxn();
+        }
+    });
+});
+
+
+
+
+
 
 
 const buttonFxn = function(event) {

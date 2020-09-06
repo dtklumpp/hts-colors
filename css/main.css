@@ -8,6 +8,10 @@ h2 {
     font-family: arial, sans-serif;
 }
 
+h4 {
+    font-family: arial, sans-serif;
+}
+
 .container {
     width: 75vh;
     height: 100vh;
@@ -65,12 +69,18 @@ h2 {
     /* font-family: Arial, Helvetica, sans-serif; */
 }
 
+
 .slider {
-    width: 30vh;
+    /* width: 30vh; */
+
     /* height: 1.6em;
     top: 50%;
     margin-top: -.8em;
     text-align: center;
     line-height: 1.6em; */
+}
+
+.sliders {
+    margin: 0 10px;
 
 }
