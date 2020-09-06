@@ -1,29 +1,53 @@
-body {
-    width: 50vh;
+
+.container {
+    width: 75vh;
+    height: 100vh;
     background-color: #f1f1f1;
 }
 
 .display {
-    height: 20vh;
-    width: 20vh;
+    height: 40vh;
+    width: 40vh;
     background-color: red;
-    margin: 0 auto;
+    margin: 2px auto;
+    border: 2px solid black;
+
 }
 
 .input {
-    width: 7vh;
-    margin: 0 auto;
-    align-self: center;
+    width: 9vh;
+    margin: 5px auto;
+    /* align-self: center; */
 }
 
 .inputs {
-    width: 25vh;
+    width: 35vh;
     display: flex;
+    justify-content: center;
     margin: 0 auto;
     /* background-color: #f100f1; */
 }
 
 .button1 {
     display: block;
+    margin: 5px auto;
+}
+
+.labels {
+    display: flex;
+    width: 35vh;
+    justify-content: center;
     margin: 0 auto;
 }
+
+.labels p {
+    width: 9vh;
+    margin: 5px auto;
+    text-align: center;
+}
+
+.convert {
+    margin: 0 auto;
+    text-align: center;
+}
+

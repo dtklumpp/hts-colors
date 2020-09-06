@@ -43,7 +43,7 @@ const buttonFxn = function(event) {
     let ratio = (1 - 2 * Math.abs(degree - 0.5));
     
     console.log(color);
-    console.log(color2);
+    //console.log(color2);
     console.log(degree);
     console.log(ratio);
     
@@ -74,8 +74,18 @@ const buttonFxn = function(event) {
     console.log('Red: '+red.hex);
     console.log('Green: '+green.hex);
     console.log('Blue: '+blue.hex);
+
+    rgbVar = 'rgb('+red.hex+', '+green.hex+', '+blue.hex+')'
     
-    $('.display').css('background-color', 'rgb('+red.hex+', '+green.hex+', '+blue.hex+')');
+    $('.display').css('background-color', rgbVar);
+
+    $('.convert1').text('RGB equivalent: '+rgbVar);
+
+    redHex = red.hex.toString(16);
+    greenHex = green.hex.toString(16);
+    blueHex = blue.hex.toString(16);
+    $('.convert2').text('HEX equivalent: #'+redHex+greenHex+blueHex);
+    
 }
 
 $('.button1').on('click', buttonFxn);
