@@ -20,10 +20,19 @@ const buttonFxn = function(event) {
         console.log('bad input reload page');
     }
     
-    let hue = Number(hue2) % 100;
+    // console.log(hue2);
+    // console.log(typeof hue2);
+    // console.log(Number(hue2));
+    // console.log(typeof Number(hue2));
     let lite = Number(lite2);
     let sat = Number(sat2);
+    let hue = Number(hue2);
+    if(hue < 0){
+        hue = hue + Math.abs(Math.floor(hue/100)*100)
+    }
+    hue = hue % 100;
     
+
     let deSat = 100 - sat;
     
     class Color {
@@ -84,8 +93,7 @@ const buttonFxn = function(event) {
     // console.log('Blue: '+blue.rgb);
 
     let rgbString = '('+red.rgb+', '+green.rgb+', '+blue.rgb+')'
-
-    console.log('rgbString: '+rgbString);
+    //console.log('rgbString: '+rgbString);
     
     $('.display').css('background-color', 'rgb'+rgbString);
 
@@ -103,10 +111,13 @@ const buttonFxn = function(event) {
     green.hex = toHexString(green);
     blue.hex = toHexString(blue);
 
-    console.log(red.rgb.toString(16));
+    let hexString = '#'+red.hex+green.hex+blue.hex;
+    //console.log('hexString: '+hexString);
+
+    //console.log(red.rgb.toString(16));
 
 
-    $('.convert2').text('HEX: #'+red.hex+green.hex+blue.hex);
+    $('.convert2').text('HEX: '+hexString);
     
 }
 
