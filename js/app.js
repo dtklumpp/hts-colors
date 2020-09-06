@@ -24,7 +24,8 @@ const buttonFxn = function(event) {
     class Color {
         constructor(){
             this.value = 0;
-            this.hex = 0;
+            this.rgb = 0;
+            this.hex = '00';
         }
     }
     
@@ -61,28 +62,46 @@ const buttonFxn = function(event) {
     
     //0-0.5: (1-ratio)
     
-    const assignHex = function(colorObject) {
-        colorObject.hex = colorObject.value * 256/100;
+    const assignRGB = function(colorObject) {
+        let rgbVal = Math.floor(colorObject.value * 256/100);
+        if(rgbVal === 256){
+            rgbVal = 255;
+        }
+        colorObject.rgb = rgbVal;
     }
     
-    assignHex(red);
-    assignHex(green);
-    assignHex(blue);
+    assignRGB(red);
+    assignRGB(green);
+    assignRGB(blue);
     
-    // console.log('Red: '+red.hex);
-    // console.log('Green: '+green.hex);
-    // console.log('Blue: '+blue.hex);
+    // console.log('Red: '+red.rgb);
+    // console.log('Green: '+green.rgb);
+    // console.log('Blue: '+blue.rgb);
 
-    rgbVar = '('+red.hex+', '+green.hex+', '+blue.hex+')'
+    let rgbString = '('+red.rgb+', '+green.rgb+', '+blue.rgb+')'
+
+    console.log('rgbString: '+rgbString);
     
-    $('.display').css('background-color', 'rgb'+rgbVar);
+    $('.display').css('background-color', 'rgb'+rgbString);
 
-    $('.convert1').text('RGB: '+rgbVar);
+    $('.convert1').text('RGB: '+rgbString);
 
-    redHex = red.hex.toString(16);
-    greenHex = green.hex.toString(16);
-    blueHex = blue.hex.toString(16);
-    $('.convert2').text('HEX: #'+redHex+greenHex+blueHex);
+    const toHexString = function(colorObject){
+        let hexVal = colorObject.rgb.toString(16);
+        if(hexVal.length === 1){
+            hexVal = '0'+hexVal;
+        }
+        return hexVal
+    }
+
+    red.hex = toHexString(red);
+    green.hex = toHexString(green);
+    blue.hex = toHexString(blue);
+
+    console.log(red.rgb.toString(16));
+
+
+    $('.convert2').text('HEX: #'+red.hex+green.hex+blue.hex);
     
 }
 
