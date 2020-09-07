@@ -1,4 +1,6 @@
 console.log('you are hearing me talk');
+//author: David T Klumpp
+
 /* 
 $( function() {
     $('.slider').slider();
@@ -62,7 +64,7 @@ $('.convert').hide();
 
 
 const buttonFxn = function(event){
-    console.log('clicked it');
+    //console.log('clicked it');
     $('.convert2').show();
 
     let hue1 = $('.input1').val();
@@ -309,7 +311,7 @@ const minusFxn = function(event) {
 }
 
 const deleteFxn = function(event) {
-    console.log('got here');
+    //console.log('got here');
     target1 = $(event.target);
     sample1 = target1.parent().parent();
     sample1.remove();
@@ -453,4 +455,4 @@ const sshToHex = function(lite2, sat2, hue2) {
     return hexString;
 }
 
-console.log(sshToHex(50, 50, 50));
+//console.log(sshToHex(50, 50, 50));
