@@ -16,7 +16,7 @@ $( function() {
         slide: function(event, ui) {
             dial1.text(ui.value);
             $('.input2').val(ui.value);
-            buttonFxn();
+            updateColors();
         }
     });
 });
@@ -32,7 +32,7 @@ $( function() {
         slide: function(event, ui) {
             dial1.text(ui.value);
             $('.input3').val(ui.value);
-            buttonFxn();
+            updateColors();
         }
     });
 });
@@ -49,18 +49,22 @@ $( function() {
         slide: function(event, ui) {
             dial1.text(ui.value);
             $('.input1').val(ui.value);
-            buttonFxn();
+            updateColors();
         }
     });
 });
 
+$('.convert').hide();
 
 
 
+const buttonFxn = function(event){
+    console.log('clicked it');
+    $('.convert').show();
+    updateColors(event);
+}
 
-
-
-const buttonFxn = function(event) {
+const updateColors = function(event) {
     let hue2 = $('.input1').val();
     let lite2 = $('.input2').val();
     let sat2 = $('.input3').val();
