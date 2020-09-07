@@ -63,7 +63,7 @@ $('.convert').hide();
 
 const buttonFxn = function(event){
     console.log('clicked it');
-    $('.convert').show();
+    $('.convert2').show();
 
     let hue1 = $('.input1').val();
     let lite1 = $('.input2').val();
@@ -210,22 +210,68 @@ const updateColors = function(event) {
 
 $('.button1').on('click', buttonFxn);
 
+
+let hiddenSSH = true;
+const hideType = function(){
+    if(hiddenSSH){
+        $('.ssh-text').hide();
+        $('.hex-text').show();
+    }
+    else{
+        $('.ssh-text').show();
+        $('.hex-text').hide();
+    }
+}
+const toggleHidden = function(){
+    hiddenSSH = !hiddenSSH;
+    hideType();
+    if(hiddenSSH){
+        $('.toggletype').text('SSH');
+    }
+    else{
+        $('.toggletype').text('HEX');
+    }
+    //toggle toggle button text
+}
+
 const saveColor = function() {
     //note: copy-pasted from above, make fxn
     let hue3 = $('.input1').val();
     let lite3 = $('.input2').val();
     let sat3 = $('.input3').val();
+    let sshText = 'SSH:('+lite3+','+sat3+','+hue3+')';
 
     let newHolder = $('<div/>').addClass('sample-holder');
     let newSample = $('<div/>').addClass('sample');
-    let newText = $('<p/>').addClass('sample-text');
-    newText.text( $('.convert2').text() );
+    let newTextHolder = $('<div/>').addClass('text-holder');
+    let newText1 = $('<p/>').addClass('sample-text').addClass('hex-text');
+    let newText2 = $('<p/>').addClass('sample-text').addClass('ssh-text');
+    newText1.text( $('.convert2').text() );
+    newText2.text( sshText );
+    newButtonHolder = $('<div/>').addClass('button-holder');
+    newButton1 = $('<button/>').text('+').addClass('plus-button');
+    newButton2 = $('<button/>').text('-').addClass('minus-button');
+    newButton3 = $('<button/>').text('x').addClass('delete-button');
 
     newSample.css('background-color', $('.display').css('background-color'));
     $('.samples').append(newHolder);
+    // $('.samples').prepend(newHolder);
     newHolder.append(newSample);
-    newHolder.append(newText);
-    
+    newHolder.append(newTextHolder);
+    newTextHolder.append(newText1);
+    newTextHolder.append(newText2);
+    newHolder.append(newButtonHolder);
+    newButtonHolder.append(newButton1);
+    newButtonHolder.append(newButton2);
+    newButtonHolder.append(newButton3);
+
+
+    //show toggle button
+    hideType();
+    $('.toggletype').show();
+
+    addListeners();
+
 }
 
 $('.saveit').on('click', saveColor);
@@ -239,6 +285,44 @@ $('.generate').on('click', generatePalette);
 
 $('.useit').hide();
 $('.generate').hide();
+$('.toggletype').hide();
+
+$('.toggletype').on('click', toggleHidden);
+
+
+
+
+
+
+const plusFxn = function(event) {
+    target1 = $(event.target);
+    sample1 = target1.parent().parent();
+    holder1 = sample1.parent();
+    holder1.prepend(sample1);
+}
+
+const minusFxn = function(event) {
+    target1 = $(event.target);
+    sample1 = target1.parent().parent();
+    holder1 = sample1.parent();
+    holder1.append(sample1);
+}
+
+const deleteFxn = function(event) {
+    console.log('got here');
+    target1 = $(event.target);
+    sample1 = target1.parent().parent();
+    sample1.remove();
+}
+
+const addListeners = function(){
+    $('.plus-button').on('click', plusFxn);
+    $('.minus-button').on('click', minusFxn);
+    $('.delete-button').on('click', deleteFxn);
+}
+
+
+
 
 
 // let hue2 = prompt('hue plz');
