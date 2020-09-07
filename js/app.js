@@ -232,6 +232,14 @@ const saveColor = function() {
 $('.saveit').on('click', saveColor);
 
 
+const exportCode = function() {};
+$('.useit').on('click', exportCode);
+
+const generatePalette = function() {};
+$('.generate').on('click', generatePalette);
+
+$('.useit').hide();
+$('.generate').hide();
 
 
 // let hue2 = prompt('hue plz');
