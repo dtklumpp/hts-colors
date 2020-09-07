@@ -85,20 +85,27 @@ h4 {
 
 }
 
+.saveit {
+    margin: 0 0 5px 0;
+}
+
 .sample-holder {
     display: flex;
-    width: 60vh;
-    height: 25vh;
-    border: 2px solid black;
+    width: 30vh;
+    height: 12vh;
+    /* border: 2px solid black; */
 }
 
 .sample {
-    height: 20vh;
-    width: 20vh;
+    height: 10vh;
+    width: 10vh;
     margin: 2px auto;
     border: 2px solid black;
 }
 
 .sample-text {
     font-family: courier, monospace;
+    height: 10vh;
+    margin: 2px auto;
+    line-height: 10vh;
 }

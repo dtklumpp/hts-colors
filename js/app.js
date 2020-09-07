@@ -216,8 +216,17 @@ const saveColor = function() {
     let lite3 = $('.input2').val();
     let sat3 = $('.input3').val();
 
+    let newHolder = $('<div/>').addClass('sample-holder');
+    let newSample = $('<div/>').addClass('sample');
+    let newText = $('<p/>').addClass('sample-text');
+    newText.text( $('.convert2').text() );
+                  $('.convert2').text()
 
-
+    newSample.css('background-color', $('.display').css('background-color'));
+    $('.samples').append(newHolder);
+    newHolder.append(newSample);
+    newHolder.append(newText);
+    
 }
 
 $('.saveit').on('click', saveColor);
