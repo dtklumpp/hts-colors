@@ -5,10 +5,13 @@ $( function() {
 });
  */
 
+
+//reduce these three slider functions to a single one...
+
 $( function() {
     let dial1 = $('#shade');
 
-    $( "#holder" ).slider({
+    $( "#holder1" ).slider({
         create: function() {
             $(this).slider('value', 50);
             dial1.text($(this).slider('value'));
@@ -61,10 +64,35 @@ $('.convert').hide();
 const buttonFxn = function(event){
     console.log('clicked it');
     $('.convert').show();
+
+    let hue1 = $('.input1').val();
+    let lite1 = $('.input2').val();
+    let sat1 = $('.input3').val();
+
+
+    $('#holder3').slider('value', hue1);
+    $('#hue').text(hue1);
+    $('#holder1').slider('value', lite1);
+    $('#shade').text(lite1);
+    $('#holder2').slider('value', sat1);
+    $('#sat').text(sat1);
+
+    // $('#hue').text($ ('.input1').val() );
+    // $('#shade').text($ ('.input2').val() );
+    // $('#sat').text($ ('.input3').val() );
+
     updateColors(event);
 }
 
+
+
 const updateColors = function(event) {
+
+    //wait i already did this above
+    // $('.input1').val( $('#holder3').text() );
+    // $('.input2').val( $('#shade').text() );
+    // $('.input3').val( $('#sat').text() );
+
     let hue2 = $('.input1').val();
     let lite2 = $('.input2').val();
     let sat2 = $('.input3').val();
@@ -182,6 +210,17 @@ const updateColors = function(event) {
 
 $('.button1').on('click', buttonFxn);
 
+const saveColor = function() {
+    //note: copy-pasted from above, make fxn
+    let hue3 = $('.input1').val();
+    let lite3 = $('.input2').val();
+    let sat3 = $('.input3').val();
+
+
+
+}
+
+$('.saveit').on('click', saveColor);
 
 
 

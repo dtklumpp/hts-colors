@@ -84,3 +84,21 @@ h4 {
     margin: 0 10px;
 
 }
+
+.sample-holder {
+    display: flex;
+    width: 60vh;
+    height: 25vh;
+    border: 2px solid black;
+}
+
+.sample {
+    height: 20vh;
+    width: 20vh;
+    margin: 2px auto;
+    border: 2px solid black;
+}
+
+.sample-text {
+    font-family: courier, monospace;
+}
