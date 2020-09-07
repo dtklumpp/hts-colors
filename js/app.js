@@ -220,7 +220,6 @@ const saveColor = function() {
     let newSample = $('<div/>').addClass('sample');
     let newText = $('<p/>').addClass('sample-text');
     newText.text( $('.convert2').text() );
-                  $('.convert2').text()
 
     newSample.css('background-color', $('.display').css('background-color'));
     $('.samples').append(newHolder);
@@ -287,6 +286,15 @@ $('.generate').hide();
 //or i dunno maybe 50 50 50
 
 
+
+
+//ANCHOR 
+//TODO
+//FIXME
+//STUB
+//NOTE
+//REVIEW
+//SECTION
 
 
 //this function is to export and use in your own code
