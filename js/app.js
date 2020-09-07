@@ -277,3 +277,80 @@ $('.saveit').on('click', saveColor);
 //brown e.g. is 70 90 41.67
 //green-brown e.g. is 50 50 51
 //or i dunno maybe 50 50 50
+
+
+
+
+//this function is to export and use in your own code
+//so you can think in SSH colors instead of RGB or HEX which are worse
+
+const sshToHex = function(lite2, sat2, hue2) {
+
+    let lite = Number(lite2);
+    let sat = Number(sat2);
+    let hue = Number(hue2);
+    if(hue < 0){
+        hue = hue + Math.abs(Math.floor(hue/100)*100)
+    }
+    hue = hue % 100;
+    
+    let deSat = 100 - sat;
+    
+    class Color {
+        constructor(){
+            this.value = 0;
+            this.rgb = 0;
+            this.hex = '00';
+        }
+    }
+    
+    let red = new Color();
+    let green = new Color();
+    let blue = new Color();
+        
+    let color = (hue * 3 / 100);
+    let degree = color - Math.floor(color);
+    let ratio = (1 - 2 * Math.abs(degree - 0.5));
+        
+    const assignRatio = function(primary, secondary, tertiary){
+        let x = primary.value = lite;
+        let y = tertiary.value = deSat/100 * lite;
+        let z = secondary.value = y + (x - y) * ratio;
+    }
+    if(color < 0.5){assignRatio(blue, red, green)} else
+    if(color < 1.0){assignRatio(red, blue, green)} else
+    if(color < 1.5){assignRatio(red, green, blue)} else
+    if(color < 2.0){assignRatio(green, red, blue)} else
+    if(color < 2.5){assignRatio(green, blue, red)} else
+    if(color <= 3){assignRatio(blue, green, red)}
+        
+    const assignRGB = function(colorObject) {
+        let rgbVal = Math.floor(colorObject.value * 256/100);
+        if(rgbVal === 256){
+            rgbVal = 255;
+        }
+        colorObject.rgb = rgbVal;
+    }
+    
+    assignRGB(red);
+    assignRGB(green);
+    assignRGB(blue);
+    
+    const toHexString = function(colorObject){
+        let hexVal = colorObject.rgb.toString(16);
+        if(hexVal.length === 1){
+            hexVal = '0'+hexVal;
+        }
+        return hexVal.toUpperCase();
+    }
+
+    red.hex = toHexString(red);
+    green.hex = toHexString(green);
+    blue.hex = toHexString(blue);
+
+    let hexString = '#'+red.hex+green.hex+blue.hex;
+
+    return hexString;
+}
+
+console.log(sshToHex(50, 50, 50));
