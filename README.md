@@ -48,7 +48,8 @@ $ open -a "Google Chrome" index.html
     
 ## Visual
 
-- screenshots (pending)
+- ![color-saver-in-action](https://user-images.githubusercontent.com/65556316/106963164-30bfa080-670e-11eb-8faf-82be17608d4c.png)
+
 
 ## Roadmap -- pending features
 
