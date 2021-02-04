@@ -77,4 +77,4 @@ MIT ©
 
 
 ## Notes
-Inspiration for this project included the "Coolors" trending color palettes [site](https://coolors.co/palettes/trending), the Paletton color wheel picker [tool](https://paletton.com/#uid=1000u0kllllaFw0g0qFqFg0w0aF), and a lot of research on the history of [Computer Graphics](https://en.wikipedia.org/wiki/Computer_graphics)
+This is my own attempt at a bare-bones and practical utility for developers, but inspiration for this project included the "Coolors" trending color palettes [site](https://coolors.co/palettes/trending), the Paletton color wheel picker [tool](https://paletton.com/#uid=1000u0kllllaFw0g0qFqFg0w0aF), and a lot of research on the history of [Computer Graphics](https://en.wikipedia.org/wiki/Computer_graphics)
