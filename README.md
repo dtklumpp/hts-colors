@@ -11,7 +11,7 @@ This service allows easy conversion between colors in the standard RGB band and 
   1. [Requirements](#Requirements)
   1. [Setup](#Setup)
   1. [Usage](#Usage)
-  1. [Screenshot](#Screenshot)
+  1. [Visual](#Visual)
   1. [Roadmap](#Roadmap)
   1. [Development](#Development)
   1. [License](#License)
@@ -46,7 +46,7 @@ $ open -a "Google Chrome" index.html
 1. Delete a color with the "X"
 1. Press "Hex" to convert everything and start a new palette
     
-## Screenshot
+## Visual
 
 - screenshots (pending)
 
