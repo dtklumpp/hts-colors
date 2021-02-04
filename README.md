@@ -6,8 +6,6 @@ This service allows easy conversion between colors in the standard RGB band and 
 
 ## Contents
 
-  1. [About](#About)
-  1. [Contents](#Contents)
   1. [Requirements](#Requirements)
   1. [Setup](#Setup)
   1. [Usage](#Usage)
@@ -58,6 +56,14 @@ $ open -a "Google Chrome" index.html
 - make an account (save palettes for later)
 - compare multiple sets of palettes at once
 - copy/paste a whole palette in Hex form as a reference
+
+## Math
+
+Key Conversions:
+- color = (hue * 3 / 100)
+- degree = color - Math.floor(color)
+- ratio = (1 - 2 * Math.abs(degree - 0.5))
+
 
 ## Development
 
