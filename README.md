@@ -59,7 +59,7 @@ $ open -a "Google Chrome" index.html
 
 ## Math
 
-Key Conversions:
+Conversion Basis:
 - color = (hue * 3 / 100)
 - degree = color - Math.floor(color)
 - ratio = (1 - 2 * Math.abs(degree - 0.5))
