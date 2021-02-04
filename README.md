@@ -1,14 +1,21 @@
-# Hue-Tone-Saturation Color-Saver
+# HTS Color-Saver
 
 ## About  
 
-This service allows easy conversion between colors in the standard RGB band and the more intuitive HTS system (hue, tone, and saturation).  I use the RGB => HSV conversion formulae developed by Albert H. Munsell et all [[1]](https://en.wikipedia.org/wiki/Munsell_color_system).  Users can save a palette of colors and corresponding hex-codes for application elsewhere.
+This service allows easy conversion between colors in the standard RGB band and the more intuitive HTS system (Hue, Tone, and Saturation).  I use the RGB => HSV conversion formulae developed by Albert H. Munsell et all [[1]](https://en.wikipedia.org/wiki/Munsell_color_system).  Users can save a palette of colors and corresponding hex-codes for application elsewhere.
 
 ## Contents
 
+  1. [About](#About)
+  1. [Contents](#Contents)
+  1. [Requirements](#Requirements)
+  1. [Setup](#Setup)
   1. [Usage](#Usage)
-  1. [Requirements](#requirements)
-  1. [Development](#development)
+  1. [Screenshot](#Screenshot)
+  1. [Roadmap](#Roadmap)
+  1. [Development](#Development)
+  1. [License](#License)
+  1. [Notes](#Notes)
 
 ## Requirements
 
@@ -39,7 +46,7 @@ $ open -a "Google Chrome" index.html
 1. Delete a color with the "X"
 1. Press "Hex" to convert everything and start a new palette
     
-## Overview
+## Screenshot
 
 - screenshots (pending)
 
