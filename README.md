@@ -6,12 +6,12 @@ This service allows easy conversion between colors in the standard RGB band and 
 
 ## Contents
 
-  1. [Requirements](#Requirements)
   1. [Setup](#Setup)
   1. [Usage](#Usage)
   1. [Visual](#Visual)
   1. [Roadmap](#Roadmap)
   1. [Development](#Development)
+  1. [Math](#Math)
   1. [License](#License)
   1. [Notes](#Notes)
 
