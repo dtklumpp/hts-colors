@@ -13,10 +13,6 @@ This service allows easy conversion between colors in the standard RGB band and 
   1. [License](#License)
   1. [Notes](#Notes)
 
-## Requirements
-
-- None
-
 ## Setup
 
 To clone and run this servce, you'll need [Git](https://git-scm.com) installed on your computer, and a modern browser.  From the command line:
