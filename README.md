@@ -1,7 +1,5 @@
 # HTS Color-Saver
 
-## About  
-
 This service allows easy conversion between colors in the standard RGB band and the more intuitive HTS system (Hue, Tone, and Saturation).  I use the RGB => HSV conversion formulae developed by Albert H. Munsell et all [[1]](https://en.wikipedia.org/wiki/Munsell_color_system).  Users can save a palette of colors and corresponding hex-codes for application elsewhere.
 
 ## Contents
