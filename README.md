@@ -2,6 +2,8 @@
 
 This service allows easy conversion between colors in the standard RGB band and the more intuitive HTS system (Hue, Tone, and Saturation).  I use the RGB => HSV conversion formulae developed by Albert H. Munsell et all [[1]](https://en.wikipedia.org/wiki/Munsell_color_system).  Users can save a palette of colors and corresponding hex-codes for application elsewhere.
 
+There are a lot of polished color-section tools on the internet, but most are pretty bloated, often run slowly, and have way more features than you need just to pick a simple color palette for your site.  This tool is designed to get you where you need to go with a minimum of distraction.
+
 ## Contents
 
   1. [Setup](#Setup)
