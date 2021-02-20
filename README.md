@@ -13,7 +13,6 @@ There are a lot of polished color-section tools on the internet, but most are pr
 
   1. [Setup](#Setup)
   1. [Usage](#Usage)
-  1. [Example of Use](#Example-of-Use)
   1. [Roadmap](#Roadmap)
   1. [Development](#Development)
   1. [Math](#Math)
