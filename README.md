@@ -4,7 +4,6 @@ This service allows easy conversion between colors in the standard RGB band and 
 
 There are a lot of polished color-section tools on the internet, but most are pretty bloated, often run slowly, and have way more features than you need just to pick a simple color palette for your site.  This tool is designed to get you where you need to go with a minimum of distraction.
 
-## Example-of-Use
 
 - ![color-saver-in-action](https://user-images.githubusercontent.com/65556316/106963164-30bfa080-670e-11eb-8faf-82be17608d4c.png)
 
